@@ -1,0 +1,159 @@
+:root {
+    --red: hsl(0, 100%, 67%);
+    --yellow: hsl(39, 100%, 56%);
+    --teal: hsl(166, 100%, 37%);
+    --blue: hsl(234, 85%, 45%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.top-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    color: #ffffff;
+    padding-block: 2em;
+    padding-inline: 2.5em;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.top-card p:nth-of-type(1) {
+    font-size: 1.8rem;
+}
+
+.faint-white {
+    color: hsl(241, 100%, 89%);
+}
+
+.total-score {
+    margin-block: 1.5em;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    padding: 1.8em;
+    aspect-ratio: 1 / 1;
+}
+
+.total-score h1 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.top-card h2 {
+    margin-bottom: .3em;
+}
+
+.lower-card {
+    padding: 0 2.8rem 1.8rem;
+    font-weight: 700;
+}
+
+.lower-card h3 {
+    color: hsl(224, 30%, 27%);
+    margin-top: 2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.4rem;
+    margin-block: 1.5rem;
+    border-radius: 1rem;
+}
+
+.flex p:nth-of-type(1) {
+    margin-left: 1rem;
+}
+
+.flex p:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.sub-score {
+    color: hsl(224, 30%, 27%);
+}
+
+.sub-score span {
+    color: hsla(224, 30%, 27%, .6);
+}
+
+.one {
+    background-color: hsla(0, 100%, 67%, .2);
+    color: hsl(0, 100%, 67%);
+}
+
+.two {
+    background-color: hsla(39, 100%, 56%, .2);
+    color: hsl(39, 100%, 56%);
+}
+
+.three {
+    background-color: hsla(166, 100%, 37%, .2);
+    color: hsl(166, 100%, 37%);
+}
+
+.four {
+    background-color: hsla(234, 85%, 45%, .2);
+    color: hsl(234, 85%, 45%);
+}
+
+.btn {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 1rem;
+    border: none;
+    border-radius: 2.5rem;
+    margin-block: 1rem;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+}
+
+@media screen and (min-width: 46em) {
+    .container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 600px;
+        border-radius: 2rem;
+        box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .top-card, .lower-card {
+        width: 50%;
+    }
+
+    .top-card {
+        border-radius: 2rem;
+    }
+
+    .btn {
+        cursor: pointer;
+        transition: all .3s linear;
+    }
+
+    .btn:hover {
+        background-color: hsl(241, 81%, 54%);
+    }
+}
